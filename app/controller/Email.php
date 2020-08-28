@@ -1,12 +1,17 @@
 <?php
 namespace app\controller;
-
 use app\BaseController;
+use think\Request;
 
 class Email extends BaseController
 {
-    public function send()
+    public function send(Request $request)
     {
-        return 'dd';
+        $data = [
+            'id' => $request->param('id'),
+            'name' => $request->param('name')
+        ];
+        $result = ['data' => $data, 'status' => true];
+        return json($result);
     }
 }

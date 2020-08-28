@@ -16,6 +16,7 @@ Route::get('think', function () {
 
 Route::get('hello/:name', 'index/hello');
 
-Route::get('send/:id', 'Email/send')
-    ->ext('html')
-    ->allowCrossDomain();
+Route::rule('api/send', 'Email/send', 'POST')
+    ->allowCrossDomain([
+        'Access-Control-Allow-Origin' => '*'
+    ]);
