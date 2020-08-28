@@ -18,5 +18,5 @@ Route::get('hello/:name', 'index/hello');
 
 Route::rule('api/send', 'Email/send', 'POST')
     ->allowCrossDomain([
-        'Access-Control-Allow-Origin' => '*'
+        'Access-Control-Allow-Origin' => env('app_debug') ? 'http://172.31.1.200:9090' : 'http://mdtzzx.com'
     ]);
