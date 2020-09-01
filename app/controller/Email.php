@@ -52,7 +52,7 @@ class Email extends BaseController
             // $mail->Body    = '来源：http://mdtzzx.com'.'<br>姓名：'.$name.'<br>手机号：'.$phone.'<br>留言：'.$word;
             // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             if ($mail->send()) {
-                $result = ['status' => true, 'message' => '邮件发送成功~'];
+                $result = ['status' => true, 'message' => '预约成功，请保持电话接通~'];
                 return json($result);
             }
         } catch (Exception $e) {
