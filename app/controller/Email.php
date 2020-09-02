@@ -10,15 +10,18 @@ use PHPMailer\PHPMailer\Exception;
 
 class Email extends BaseController
 {
+    protected $autoWriteTimestamp = 'datetime';
     public function aaa() {
         var_dump(env('app_debug'));
         // return env('app_debug');
     }
     public function send(Request $request)
     {
+        $time = date('Y.m.d h:i:s');
         $source = $request->param('source');
         $name   = $request->param('name');
         $phone  = $request->param('phone');
+        $company  = $request->param('company');
         $word   = $request->param('word');
         $mail   = new PHPMailer(true);
         try {
@@ -48,7 +51,7 @@ class Email extends BaseController
             // Content
             $mail->isHTML(true);                                  // Set email format to HTML
             $mail->Subject = '订单信息';
-            $mail->Body    = '来源：'.$source.'<br>姓名：'.$name.'<br>手机号：'.$phone.'<br>留言：'.$word;
+            $mail->Body    = '来源：'.$source.'<br>姓名：'.$name.'<br>手机号：'.$phone.'<br>公司名称：'.$company.'<br>留言：'.$word.'<br>时间：'.$time;
             // $mail->Body    = '来源：http://mdtzzx.com'.'<br>姓名：'.$name.'<br>手机号：'.$phone.'<br>留言：'.$word;
             // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             if ($mail->send()) {
