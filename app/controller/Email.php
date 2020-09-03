@@ -2,6 +2,7 @@
 namespace app\controller;
 use app\BaseController;
 use think\Request;
+use think\facade\View;
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -10,10 +11,9 @@ use PHPMailer\PHPMailer\Exception;
 
 class Email extends BaseController
 {
-    protected $autoWriteTimestamp = 'datetime';
-    public function aaa() {
-        var_dump(env('app_debug'));
-        // return env('app_debug');
+    public function index() {
+        return View::fetch();
+        // echo 'ddd';
     }
     public function send(Request $request)
     {
