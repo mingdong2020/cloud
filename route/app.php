@@ -15,7 +15,7 @@ Route::rule('api/send', 'Email/send', 'POST')
         'Access-Control-Allow-Origin' => env('app_debug') ? 'http://172.20.10.4:9090' : 'http://mdtzzx.com'
     ]);
 
-Route::rule('home/record', 'Record/index', 'GET')
+Route::rule('home/record', 'Record/index', 'POST')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
