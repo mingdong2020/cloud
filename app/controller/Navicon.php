@@ -85,6 +85,7 @@ class Navicon extends BaseController
         );
         $params = array(
             'status' => true,
+            'theme'  => '股权信息服务',
             'data'   => [
                 [$company01, $company02, $company03],
             ]
