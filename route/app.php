@@ -32,62 +32,62 @@ Route::rule('api/service', 'Navicon/service', 'POST')
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/agency', 'Equity/agency', 'POST')
+Route::rule('api/equity/agency', 'Equity/agency', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/assets', 'Equity/assets', 'POST')
+Route::rule('api/equity/assets', 'Equity/assets', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/broker', 'Equity/broker', 'POST')
+Route::rule('api/equity/broker', 'Equity/broker', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/equity', 'Equity/equity', 'POST')
+Route::rule('api/equity/equity', 'Equity/equity', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/factor', 'Equity/factor', 'POST')
+Route::rule('api/equity/factor', 'Equity/factor', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/invest', 'Equity/invest', 'POST')
+Route::rule('api/equity/invest', 'Equity/invest', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/itloan', 'Equity/itloan', 'POST')
+Route::rule('api/equity/itloan', 'Equity/itloan', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/lease', 'Equity/lease', 'POST')
+Route::rule('api/equity/lease', 'Equity/lease', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/loan', 'Equity/loan', 'POST')
+Route::rule('api/equity/loan', 'Equity/loan', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/other', 'Equity/other', 'POST')
+Route::rule('api/equity/other', 'Equity/other', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/pawn', 'Equity/pawn', 'POST')
+Route::rule('api/equity/pawn', 'Equity/pawn', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
 
-Route::rule('api/equity/private', 'Equity/private', 'POST')
+Route::rule('api/equity/private', 'Equity/private', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
