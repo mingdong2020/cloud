@@ -59,4 +59,36 @@ class Navicon extends BaseController
         // );
         return json($params);
     }
+
+    public function equity()
+    {
+        $company01 = array(
+            "equityUrl"    => "/page/service/equity-lease-detail/equity-lease-detail?id=3",
+            "equityImg"    => "https://mdqygl.cn/static/source/equity/lease_show03.jpg",
+            "equityTitle"  => "名称：上海**融资租赁有限公司",
+            "equityAddres" => "地址：中国（上海）自由贸易试验区**室",
+            "equityDate"   => "日期：2017年08月11日 发布"
+        );
+        $company02 = array(
+            "equityUrl"    => "/page/service/equity-agency-detail/equity-agency-detail?id=3",
+            "equityImg"    => "https://mdqygl.cn/static/source/equity/agency_show03.jpg",
+            "equityTitle"  => "名称：**保险代理有限公司",
+            "equityAddres" => "地址：中国(上海)自由贸易试验区锦康路**号",
+            "equityDate"   => "日期：2017年09月25日 发布"
+        );
+        $company03 = array(
+            "equityUrl"    => "/page/service/equity-factor-detail/equity-factor-detail?id=4",
+            "equityImg"    => "https://mdqygl.cn/static/source/equity/factor_show04.jpg",
+            "equityTitle"  => "名称：华***国际商业保理有限公司",
+            "equityAddres" => "地址：中国(上海)自由贸易试验区**路*号",
+            "equityDate"   => "2017年06月29日 发布"
+        );
+        $params = array(
+            'status' => true,
+            'data'   => [
+                [$company01, $company02, $company03],
+            ]
+        );
+        return json($params);
+    }
 }
