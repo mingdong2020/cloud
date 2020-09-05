@@ -42,21 +42,21 @@ class Navicon extends BaseController
             "navIconImg"  => "/image/sense-form.png",
             "navIconText" => "留言预约"
         );
-        // $params = array(
-        //     'status' => true,
-        //     'data'   => [
-        //         [$company, $tax, $agency, $appro, $card],
-        //         [$form]
-        //     ]
-        // );
-        // 审核不通过暂时办法
         $params = array(
             'status' => true,
             'data'   => [
-                [$company, $tax, $equity, $agency, $appro],
-                [$card, $form]
+                [$company, $tax, $agency, $appro, $card],
+                [$form]
             ]
         );
+        // 审核不通过暂时办法
+        // $params = array(
+        //     'status' => true,
+        //     'data'   => [
+        //         [$company, $tax, $equity, $agency, $appro],
+        //         [$card, $form]
+        //     ]
+        // );
         return json($params);
     }
 
@@ -85,10 +85,10 @@ class Navicon extends BaseController
         );
         $params = array(
             'status' => true,
-            'more'   => true,
+            'more'   => false,
             'theme'  => '股权信息服务',
             'data'   => [
-                [$company01, $company02, $company03],
+                // [$company01, $company02, $company03],
             ]
         );
         return json($params);
@@ -140,8 +140,8 @@ class Navicon extends BaseController
 
         $params = array(
             'status' => true,
-            // 'data'   => [$company, $tax, $agency, $appro, $card]
-            'data'   => [$company, $tax, $equity, $agency, $appro, $card]
+            'data'   => [$company, $tax, $agency, $appro, $card]
+            // 'data'   => [$company, $tax, $equity, $agency, $appro, $card]
         );
         return json($params);
     }
