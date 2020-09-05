@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/account.9a8f73e0.css"
   },
   {
-    "revision": "93405de595f93147eee8",
-    "url": "/css/app.61bf237f.css"
+    "revision": "d521203eb74371b1126e",
+    "url": "/css/app.a8d7e2ab.css"
   },
   {
     "revision": "98ce0ae14b6c01ab0645",
@@ -228,7 +228,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/wechat.aa80fc0c.png"
   },
   {
-    "revision": "810aa6da796fe305a47189f832675972",
+    "revision": "81de0f3edb6059a637e64665cec156c0",
     "url": "/index.html"
   },
   {
@@ -240,8 +240,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/account.fd555317.js"
   },
   {
-    "revision": "93405de595f93147eee8",
-    "url": "/js/app.49ac18cc.js"
+    "revision": "d521203eb74371b1126e",
+    "url": "/js/app.5faf960b.js"
   },
   {
     "revision": "98ce0ae14b6c01ab0645",
