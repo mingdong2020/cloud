@@ -45,10 +45,18 @@ class Navicon extends BaseController
         $params = array(
             'status' => true,
             'data'   => [
-                [$company, $tax, $equity, $agency, $appro],
-                [$card, $form]
+                [$company, $tax, $agency, $appro, $card],
+                [$form]
             ]
         );
+        // 审核不通过暂时办法
+        // $params = array(
+        //     'status' => true,
+        //     'data'   => [
+        //         [$company, $tax, $equity, $agency, $appro],
+        //         [$card, $form]
+        //     ]
+        // );
         return json($params);
     }
 }
