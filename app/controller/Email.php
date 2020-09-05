@@ -13,7 +13,6 @@ class Email extends BaseController
 {
     public function index() {
         return View::fetch();
-        // echo 'ddd';
     }
     public function send(Request $request)
     {

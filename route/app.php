@@ -19,7 +19,7 @@ Route::rule('home/record', 'Record/index', 'POST')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
-// Route::rule('api/login', 'Login/wechat', 'GET')
-//     ->allowCrossDomain([
-//         'Access-Control-Allow-Origin' => env('app_debug') ? 'http://172.31.1.200:9090' : 'http://mdtzzx.com'
-//     ]);
+Route::rule('api/menu', 'Navicon/index', 'POST')
+    ->allowCrossDomain([
+        'Access-Control-Allow-Origin' => '*'
+    ]);

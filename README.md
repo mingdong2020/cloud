@@ -57,3 +57,36 @@ ThinkPHP® 商标和著作权所有者为上海顶想信息科技有限公司。
 
 
 ### 明动云控
+
+
+### 接口说明
+【1】
+接口名称: 发送邮件接口
+methods: POST
+接口地址: api/send (Email/send)
+参数:
+{
+    source: String,  // 来源
+    name: String,    // 姓名
+    phone: Number,   // 手机号
+    company: String, // 公司名称
+    word: String     // 描述
+}
+返回值:
+{
+    status: Boolean
+    message: String
+}
+【2】
+接口名称: 备案接口
+methods: POST
+接口地址: home/record (Record/index)
+参数:
+返回值:
+{
+    status: Boolean
+    data: {
+        key: 域名信息,
+        value: 备案信息
+    }
+}
