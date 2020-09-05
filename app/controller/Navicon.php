@@ -88,7 +88,7 @@ class Navicon extends BaseController
             'more'   => false,
             'theme'  => '股权信息服务',
             'data'   => [
-                [$company01, $company02, $company03],
+                // [$company01, $company02, $company03],
             ]
         );
         return json($params);
