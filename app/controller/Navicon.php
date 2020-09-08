@@ -42,16 +42,12 @@ class Navicon extends BaseController
             "navIconImg"  => "/image/sense-form.png",
             "navIconText" => "留言预约"
         );
-        // $params = array(
-        //     'status' => true,
-        //     'data'   => [
-        //         [$company, $tax, $agency, $appro, $card],
-        //         [$form]
-        //     ]
-        // );
-        // 审核不通过暂时办法
         $params = array(
             'status' => true,
+            // 'data'   => [
+            //     [$company, $tax, $agency, $appro, $card],
+            //     [$form]
+            // ]
             'data'   => [
                 [$company, $tax, $equity, $agency, $appro],
                 [$card, $form]
