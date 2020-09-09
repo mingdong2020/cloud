@@ -23,7 +23,7 @@ class Record extends BaseController
             'mingdongtouzizixun.cn' => '0-1-1-1',
             'zimaoquzixun.cn' => '0-1-1-1',
             'zimaoquzixun.com' => '0-1-1-1',
-            'mdtzzx.com' => '0-1-1-1',
+            'mdqygl.cn' => '0-1-1-1',
             'shmdzc.cn' => '0-1-1-1',
             'shmdzc.com' => '0-1-1-1',
             'e-zhuxiao.com' => '0-1-1-1',
