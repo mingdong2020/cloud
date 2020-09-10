@@ -42,18 +42,25 @@ class Navicon extends BaseController
             "navIconImg"  => "/image/sense-form.png",
             "navIconText" => "留言预约"
         );
-        $params = array(
-            'status' => true,
-            // 'data'   => [
-            //     [$company, $tax, $agency, $appro, $card],
-            //     [$form]
-            // ]
-            'data'   => [
-                [$company, $tax, $equity, $agency, $appro],
-                [$card, $form]
-            ]
-        );
-        return json($params);
+        if (env('app_wechat_pass')) {
+            $params = array(
+                'status' => true,
+                'data'   => [
+                    [$company, $tax, $equity, $agency, $appro],
+                    [$card, $form]
+                ]
+            );
+            return json($params);
+        } else {
+            $params = array(
+                'status' => true,
+                'data'   => [
+                    [$company, $tax, $agency, $appro, $card],
+                    [$form]
+                ]
+            );
+            return json($params);
+        }
     }
 
     public function equity()
@@ -79,15 +86,26 @@ class Navicon extends BaseController
             "equityAddres" => "地址：中国(上海)自由贸易试验区**路*号",
             "equityDate"   => "2017年06月29日 发布"
         );
-        $params = array(
-            'status' => true,
-            'more'   => false,
-            'theme'  => '股权信息服务',
-            'data'   => [
-                [$company01, $company02, $company03],
-            ]
-        );
-        return json($params);
+        if (env('app_wechat_pass')) {
+            $params = array(
+                'status' => true,
+                'more'   => false,
+                'theme'  => '股权信息服务',
+                'data'   => [
+                    [$company01, $company02, $company03],
+                ]
+            );
+            return json($params);
+        } else {
+            $params = array(
+                'status' => true,
+                'more'   => false,
+                'theme'  => '股权信息服务',
+                'data'   => [
+                ]
+            );
+            return json($params);
+        }
     }
 
     public function service() {
@@ -134,11 +152,18 @@ class Navicon extends BaseController
             "pageurl" => ['card-it', 'card-idc', 'card-vpn', 'card-inland', 'card-edi', 'card-storage', 'card-center', 'card-icp', 'card-sp']
         );
 
-        $params = array(
-            'status' => true,
-            // 'data'   => [$company, $tax, $agency, $appro, $card]
-            'data'   => [$company, $tax, $equity, $agency, $appro, $card]
-        );
-        return json($params);
+        if (env('app_wechat_pass')) {
+            $params = array(
+                'status' => true,
+                'data'   => [$company, $tax, $agency, $appro, $card]
+            );
+            return json($params);
+        } else {
+            $params = array(
+                'status' => true,
+                'data'   => [$company, $tax, $equity, $agency, $appro, $card]
+            );
+            return json($params);
+        }
     }
 }

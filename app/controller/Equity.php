@@ -126,7 +126,7 @@ class Equity extends BaseController
     }
 
     public function private()
-    {
+    {        
         $data = file_get_contents('statics/json/data-equity-private.json');
         $params = array(
             'status' => true,
