@@ -46,8 +46,8 @@ class Navicon extends BaseController
             $params = array(
                 'status' => true,
                 'data'   => [
-                    [$company, $tax, $equity, $agency, $appro],
-                    [$card, $form]
+                    [$company, $tax, $agency, $appro, $card],
+                    [$form]
                 ]
             );
             return json($params);
@@ -55,8 +55,8 @@ class Navicon extends BaseController
             $params = array(
                 'status' => true,
                 'data'   => [
-                    [$company, $tax, $agency, $appro, $card],
-                    [$form]
+                    [$company, $tax, $equity, $agency, $appro],
+                    [$card, $form]
                 ]
             );
             return json($params);
@@ -92,7 +92,6 @@ class Navicon extends BaseController
                 'more'   => false,
                 'theme'  => '股权信息服务',
                 'data'   => [
-                    [$company01, $company02, $company03],
                 ]
             );
             return json($params);
@@ -102,6 +101,7 @@ class Navicon extends BaseController
                 'more'   => false,
                 'theme'  => '股权信息服务',
                 'data'   => [
+                    [$company01, $company02, $company03],
                 ]
             );
             return json($params);
@@ -155,13 +155,13 @@ class Navicon extends BaseController
         if (env('app_wechat_pass')) {
             $params = array(
                 'status' => true,
-                'data'   => [$company, $tax, $agency, $appro, $card]
+                'data'   => [$company, $tax, $equity, $agency, $appro, $card]
             );
             return json($params);
         } else {
             $params = array(
                 'status' => true,
-                'data'   => [$company, $tax, $equity, $agency, $appro, $card]
+                'data'   => [$company, $tax, $agency, $appro, $card]
             );
             return json($params);
         }
