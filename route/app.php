@@ -31,6 +31,10 @@ Route::rule('api/service', 'Navicon/service', 'POST')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
+Route::rule('api/inform', 'Navicon/inform', 'GET')
+    ->allowCrossDomain([
+        'Access-Control-Allow-Origin' => '*'
+    ]);
 
 Route::rule('api/equity/agency', 'Equity/agency', 'GET')
     ->allowCrossDomain([

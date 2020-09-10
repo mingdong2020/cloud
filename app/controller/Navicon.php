@@ -166,4 +166,25 @@ class Navicon extends BaseController
             return json($params);
         }
     }
+
+    public function inform() {
+        $inform = array(
+            'agency'  => '保险代理',
+            'assets'  => '资产管理',
+            'broker'  => '保险经纪',
+            'equity'  => '股权基金',
+            'factor'  => '商业保理',
+            'invest'  => '投资管理',
+            'itloan'  => '互联网小额贷',
+            'lease'   => '融资租赁',
+            'loan'    => '小额贷款',
+            'other'   => '其他',
+            'pawn'    => '典当行',
+            'private' => '私募牌照'
+        );
+        if (!env('app_wechat_pass')) {
+            return json($inform);
+        }
+        
+    }
 }
