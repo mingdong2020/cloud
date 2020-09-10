@@ -183,7 +183,11 @@ class Navicon extends BaseController
             'private' => '私募牌照'
         );
         if (!env('app_wechat_pass')) {
-            return json($inform);
+            $params = array(
+                'status' => true,
+                'data'   => json_decode($inform)
+            );
+            return json($params);
         }
         
     }
