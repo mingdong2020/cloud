@@ -182,10 +182,16 @@ class Navicon extends BaseController
             'pawn'    => '典当行',
             'private' => '私募牌照'
         );
-        if (!env('app_wechat_pass')) {
+        if (env('app_wechat_pass')) {
             $params = array(
                 'status' => true,
-                'data'   => json_decode($inform)
+                'data'   => null
+            );
+            return json($params);
+        } else {
+            $params = array(
+                'status' => true,
+                'data'   => $inform
             );
             return json($params);
         }
