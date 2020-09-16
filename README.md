@@ -90,3 +90,97 @@ methods: POST
         value: 备案信息
     }
 }
+【3】
+接口名称: 小程序首页tabber接口(过审模式接口)
+methods: POST
+接口地址: api/menu (Navicon/index)
+参数:
+返回值:
+{
+    status: Boolean
+    data: [
+        {
+            navIconUrl: 跳转地址,
+            navIconImg: tab图标,
+            navIconText: tab文案
+        }
+    ]
+}
+【4】
+接口名称: 小程序首页列表接口(过审模式接口)
+methods: POST
+接口地址: api/equity (Navicon/equity)
+参数:
+返回值:
+{
+    status: Boolean,
+    more: Boolean, // 更多
+    theme: String  // 主题
+    data: [
+        {
+            equityUrl: 跳转地址,
+            equityImg: 图标,
+            equityTitle: 标题,
+            equityAddres: 文案,
+            equityDate: 日期,
+        }
+    ]
+}
+【5】
+接口名称: 小程序服务页列表接口(过审模式接口)
+methods: POST
+接口地址: api/service (Navicon/service)
+参数:
+返回值:
+{
+    status: Boolean,
+    data: [
+        {
+            id: id,
+            name: 名称,
+            open: 是否展开,
+            pages: 子类,
+            pageurl: 子类跳转地址,
+        }
+    ]
+}
+
+【6】
+接口名称: 小程序股权信息菜单接口(过审模式接口)
+methods: POST
+接口地址: api/inform (Navicon/inform)
+参数:
+返回值:
+{
+    status: Boolean,
+    data: {
+        key: 键值,
+        value: 名称
+    }
+}
+
+【7】
+接口名称: 小程序股权信息内容接口(过审模式接口)
+methods: GET
+接口地址: api/equity/agency  (Equity/agency)
+接口地址: api/equity/assets  (Equity/assets)
+接口地址: api/equity/broker  (Equity/broker)
+接口地址: api/equity/equity  (Equity/equity)
+接口地址: api/equity/factor  (Equity/factor)
+接口地址: api/equity/invest  (Equity/invest)
+接口地址: api/equity/itloan  (Equity/itloan)
+接口地址: api/equity/lease   (Equity/lease)
+接口地址: api/equity/loan    (Equity/loan)
+接口地址: api/equity/other   (Equity/other)
+接口地址: api/equity/pawn    (Equity/pawn)
+接口地址: api/equity/private (Equity/private)
+参数:
+返回值:
+{
+    status: Boolean,
+    title: String,
+    data: []
+}
+
+
+
