@@ -95,3 +95,8 @@ Route::rule('api/equity/private', 'Equity/private', 'GET')
     ->allowCrossDomain([
         'Access-Control-Allow-Origin' => '*'
     ]);
+// 短链接
+Route::rule('e2fc', 'Short/short', 'GET')
+    ->allowCrossDomain([
+        'Access-Control-Allow-Origin' => '*'
+    ]);
