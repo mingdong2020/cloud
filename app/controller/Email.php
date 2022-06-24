@@ -38,8 +38,8 @@ class Email extends BaseController
             //Recipients
             $mail->setFrom('13163204608@163.com', '明动咨询');
             $mail->addAddress('13163204608@163.com', '明动咨询');     // Add a recipient
-            $mail->addAddress('mingdong2020@163.com');               // Name is optional
-            $mail->addAddress('hyshi@mingdong.net.cn');               // Name is optional
+            // $mail->addAddress('mingdong2020@163.com');               // Name is optional
+            // $mail->addAddress('hyshi@mingdong.net.cn');               // Name is optional
             // $mail->addReplyTo('info@example.com', 'Information');
             // $mail->addCC('cc@example.com');
             // $mail->addBCC('bcc@example.com');
