@@ -12,9 +12,10 @@ use think\facade\Route;
 
 Route::rule('api/send', 'Email/send', 'POST')
     ->allowCrossDomain([
-        'Access-Control-Allow-Origin' => env('app_debug') ? 'http://172.20.10.4:9090' : 'http://mdtzzx.com',
-        'Access-Control-Allow-Origin' => env('app_debug') ? 'http://172.20.10.4:9090' : 'http://mdtzzx.cn',
-        'Access-Control-Allow-Origin' => env('app_debug') ? 'http://172.20.10.4:9090' : 'http://nuotang.cn',
+        'Access-Control-Allow-Origin' => env('app_debug') ? 'http://172.20.10.4:9090' : '*',
+        // 'Access-Control-Allow-Origin' => env('app_debug') ? 'http://172.20.10.4:9090' : 'http://mdtzzx.com',
+        // 'Access-Control-Allow-Origin' => env('app_debug') ? 'http://172.20.10.4:9090' : 'http://mdtzzx.cn',
+        // 'Access-Control-Allow-Origin' => env('app_debug') ? 'http://172.20.10.4:9090' : 'http://nuotang.cn',
     ]);
 
 Route::rule('home/record', 'Record/index', 'POST')
