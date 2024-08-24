@@ -1,5 +1,0 @@
-# Robots.txt file from http://mingdongzixun.com
-# All robots will spider the domain
-
-User-agent: *
-Disallow:
