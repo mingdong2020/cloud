@@ -1,4 +1,7 @@
 ThinkPHP 6.0
+
+运行项目
+$ php think run
 ===============
 
 > 运行环境要求PHP7.1+。
